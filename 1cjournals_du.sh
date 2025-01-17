@@ -11,7 +11,7 @@
 
 
 # find 1C services
-UNIT_NAME=`systemctl list-unit-files --type=service --state=enabled --no-pager --no-legend | grep srv1c | awk '{print $1}'`
+UNIT_NAME=`systemctl list-unit-files --type=service --state=enabled --no-pager --no-legend | grep srv1c | awk 'NR==1{print $1}'`
 SRV1CV8_REGPORT=`systemctl cat $UNIT_NAME --no-pager | grep -oP '^Environment=SRV1CV8_REGPORT=\K[^\s]+'`
 SRV1CV8_DATA=`systemctl cat $UNIT_NAME --no-pager | grep -oP '^Environment=SRV1CV8_DATA=\K[^\s]+'`
 SRV1CV8_BIN=`systemctl cat $UNIT_NAME --no-pager | grep -oP '^ExecStart=\K[^\s]+'`
