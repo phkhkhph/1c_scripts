@@ -6,12 +6,12 @@
 
 Использование: 
 ```
-./1cjolurnals_du.sh
+./1cjournals_du.sh
 ```
 
 Пример вывода:
 ```
-$ ./1cjolurnals_du.sh
+$ ./1cjournals_du.sh
 Найденные журналы:
 #      Имя базы                          Размер журналов
 1)     ed0fd719-cfe4-4d9d-ba09-eb84403cfdeb     903M   X
